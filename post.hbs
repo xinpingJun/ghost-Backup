@@ -1,0 +1,57 @@
+{{!< default}}
+
+{{#post}}
+<section class="hero background-img is-large" style="background-image: url('{{img_url feature_image}}')">
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title has-text-white is-size-2 ">
+        {{title}}
+      </h1>
+        <h4 class="subtitle is-6">
+        <!-- <span class="reading-time" style="text-transform: uppercase;dsi">{{reading_time}}</span> -->
+        <time class="has-text-light" datetime="{{date format="YYYY-MM-DD"}}">{{date format='YYYY-MM-DD'}}</time>
+         /
+        {{#primary_author}}
+        <a href="{{url}}" class="has-text-light">{{name}}</a>
+        {{/primary_author}}
+      </h4>
+
+    </div>
+  </div>
+</section>
+
+<section class="post">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <div class="post-content">
+          {{content}}
+          {{#if tags}}
+            <div class="post-tags">
+              {{#foreach tags limit="3"}}
+                <a class="button tag-{{slug}} is-rounded" href="{{url}}" title="{{name}}" aria-label="{{name}}s">#{{name}}</a>
+              {{/foreach}}
+            </div>
+          {{/if}}
+        </div>
+        {{!-- {{> social-share}} --}}
+       <!-- {{> disqus}}  -->
+        <!--PC版-->
+        <!-- <div id="SOHUCS" sid="{{name}}"></div>
+        <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
+        <script type="text/javascript">
+        window.changyan.api.config({
+        appid: 'cytLHjd0e',
+        conf: 'prod_698f6e160346bc888b054aa3d848af47'
+        });
+        </script> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+{{!-- Related posts --}}
+{{> related-posts}}
+
+{{/post}}

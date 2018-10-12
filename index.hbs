@@ -1,0 +1,34 @@
+{{!< default}}
+ 
+<section class="hero background-img is-large" style="background-image: url('{{@blog.cover_image}}')">
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title is-size-1 has-text-white">
+        <!-- {{@blog.title}} -->
+        <!-- Do one thing at a time, and do well. -->
+        Life was like a box of chocolates, you never know what you’re gonna get.
+      </h1>
+      <h4 class="subtitle has-text-light is-6">
+        <!-- {{@blog.description}} -->
+        <!-- 一次只做一件事，做到最好。 -->
+        生命就像一盒巧克力，结果往往出人意料。
+      </h4>
+    </div>
+  </div>
+</section>
+
+<section class="posts">
+  <div class="container">
+    {{!-- Latest Posts --}}
+    <div class="columns is-multiline">
+      {{#foreach posts }}
+        <div class="column is-12-mobile is-6-tablet is-4-widescreen is-6-desktop">
+          {{> post-card class="bottom-border"}}
+        </div>
+      {{/foreach}}
+    </div>
+
+    {{pagination}}
+  </div>
+</section>

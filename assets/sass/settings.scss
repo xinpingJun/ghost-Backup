@@ -1,0 +1,22 @@
+@font-face {
+	font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'),local('OpenSans-Light'),url(../font/open-sans-300.woff) format('woff');
+}
+
+@font-face {
+	font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans'),local('OpenSans'),url(../font/open-sans-400.woff) format('woff');
+}
+
+@font-face {
+	font-family:'Open Sans';font-style:normal;font-weight:600;src:local('Open Sans Semibold'),local('OpenSans-Semibold'),url(../font/open-sans-600.woff) format('woff');
+}
+
+// Variables
+$primary: #FFBC8C;
+$secondary: #599EED;
+// $link: #FFBC8C;
+$link: #000;
+$link-visited: $secondary;
+$spacing: 1em;
+$family-sans-serif: "Open Sans","Segoe UI","Helvetica",sans-serif;
+$font-weight-extra-bold: 900;
+$column-gap: $spacing;
